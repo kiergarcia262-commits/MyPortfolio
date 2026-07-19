@@ -1,0 +1,320 @@
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;        /* Prevents anything from breaking out horizontally */
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;       /* Ensures padding doesn't accidentally add to element widths */
+}
+body{
+  background-color: #0b0f19;
+  font-family: Arial, sans-serif;
+}
+.logo {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  top: 20px;
+  height: 70px;
+  align-items: center;
+  background-color: #141b2d;
+  padding: 1em;
+  border: 1px solid #333;
+  border-radius: 15px;
+  position: relative;
+  top: 0;
+  z-index: 100; 
+}
+.navBar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1em;
+}
+.navBar a:hover {
+  text-shadow: 0 0 5px #00bfff;
+  color: #00bfff;
+}
+h3{
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  font-size: 1.2em;
+}
+.mt-5 h2, p{
+  display: flex;
+  margin-left: 5em;
+  justify-content: flex-start;
+  color: white;
+  font-size: 1.2em;
+}
+.mt-5 h2 {
+  font-size: 1.8em;
+}
+.tnx{
+  display: flex;
+  margin-left: 3.5em;
+  padding-top: 2rem;
+  justify-content: flex-start;
+  background: linear-gradient(to right, #36cdfc, #1121ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 1.8em;
+}
+.card-container {
+  font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;       
+    flex-wrap: wrap;          
+    justify-content: center;   
+    align-items: row;                   
+    width: 100%;               
+    max-width: 1200px;        
+    margin: 2em auto 0 auto;  
+    box-sizing: border-box;
+}
+.mt-5 {
+ display: flex;
+}
+.about-text {
+    margin-top: 5em;
+    width: 70%;
+  
+}
+.profilPic {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover; 
+    border: 2px solid #00bfff; 
+}
+.about-image {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+  }
+.card {
+    border: 1px solid #333;
+    background-color: #141b2d;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    padding: 1.2em;
+    margin: 1em;
+    width: 280px;
+    min-height: 280px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.05); 
+   
+    box-shadow: 0 0 15px #00bfff;
+    z-index: 10;
+}
+img {
+    width: 100%;     
+    height: auto;    
+    border-radius: 8px;
+}
+.card h3 {
+    font-family: Arial, sans-serif;
+    color: #ffffff; 
+    margin: 0.5em 0 0.2em 0;
+    font-size: 1.4rem;
+}
+.card p {
+    color: #cbd5e1; 
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+.bsuImg{
+  width: 100px;
+  height: auto;
+}
+.degree{
+  margin-left: 5em;
+  color: white;
+  font-size: 1.2em;
+}
+.school{
+  margin-left: 6em;
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+.contact-container p{
+    padding: 2rem;
+    margin-left: 2.5em; 
+    background: linear-gradient(to right, #36cdfc, #1121ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border-radius: 10px;
+    
+}
+.contact-title {
+  text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin: 0;
+}
+.email-input{
+    width: 90%;
+    height: 40px;
+    padding: 1rem;
+    margin: 0.5rem auto;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background-color: #0b0f19;
+    color: white;
+}
+.send-button {
+    width: 40%;
+    height: 50px;
+    padding: 1em;
+    margin: 0.5rem auto;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background-color: #00bfff;
+    color: white;
+    cursor: pointer;
+}
+.send-button:hover {
+    background-color: #009acd;
+}
+.contact-info {
+    display: flex;
+    background-color: #141b2d;
+    border-radius: 15px;
+    width: 500px;
+    height: 350px;
+    flex-direction: column;
+    color: white;
+    font-size: 1rem;
+    border: 1px solid #333;
+    margin: 0 auto;
+}
+.contact-info  a {
+    margin: 0.5em 0;
+    color: #00bfff;
+    text-decoration: none;
+}
+
+/* Outer slider frame that contains the buttons and viewport */
+.slider-container {
+    position: relative;
+    max-width: 1060px;       /* Shows exactly 3 cards at once (3 * 320px + gaps) */
+    margin: 2em auto;
+    padding: 0 50px;         /* Gives breathing room for the absolute positioned arrows */
+}
+
+/* The viewport window that cuts off hidden cards */
+.slider-viewport {
+    overflow: hidden;        /* Keeps hidden items out of sight */
+    width: 100%;
+}
+
+/* The horizontal track holding all your cards */
+.card-container.slider-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;       /* CRITICAL: Keeps everything strictly on one single line */
+    justify-content: flex-start; 
+    gap: 25px;
+    width: max-content;      /* Allows container to extend infinitely horizontal */
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* Makes the sliding transition silky smooth */
+}
+
+/* Enforce rigid width rules on cards so they don't squish */
+.card {
+    width: 320px;
+    flex-shrink: 0;          /* Prevents cards from resizing or squishing when packed */
+}
+
+/* General Styling for Arrow Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(20, 27, 45, 0.8); /* Dark matching background with transparency */
+    color: #00bfff;          /* Vibrant matching cyan arrow indicator */
+    border: 1px solid #333;
+    font-size: 24px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.slider-btn:hover {
+    background-color: #00bfff;
+    color: #141b2d;
+    box-shadow: 0 0 10px #00bfff;
+}
+
+/* Left button placement */
+.prev-btn {
+    left: 0;
+}
+
+/* Right button placement */
+.next-btn {
+    right: 0;
+}
+.footer{
+    background-color: #141b2d;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    border-top: 1px solid #333;
+}
+
+/* Mobile responsive resets */
+@media (max-width: 768px) {
+    .slider-container {
+        padding: 0 40px;
+    }
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+} 
+@media (max-width: 600px) {
+    .card-container {
+        flex-direction: column;   
+        align-items: center;   
+        gap: 20px;
+        padding: 0 15px;         
+    }
+
+    .card {
+        width: 100%;              
+        min-height: auto;      
+        margin: 0;          
+    }
+    
+    .card:hover {
+        transform: scale(1.02);   
+    }
+}
